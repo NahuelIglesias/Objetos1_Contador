@@ -1,0 +1,19 @@
+import Ejercicio1Practica5.*
+
+test "contador x" {
+	var x = new Contador()
+	x.inc()
+	x.dec()
+	x.inc()
+	assert.equals(1, x.valorActual())
+	assert.equals("incremento", x.ultimoComando())
+}
+
+test "contador y" {
+	var y = new Contador(
+		memoria = 11,
+		ultimoComando = "incremento"
+	)
+	assert.equals(11, y.valorActual())
+	assert.equals("incremento", y.ultimoComando())
+}
